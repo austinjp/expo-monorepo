@@ -1,7 +1,7 @@
 export { ExampleComponent } from './src/components/ExampleComponent';
 
 const messages = [
-  'I said don\'t tap me!\n\nOr maybe I wanted you to tap me and by exploiting your curiosity I got what I wanted. 😈\n\nSeriously don\t tap me again!',
+  'I said don\'t tap me!\n\nOr maybe I wanted you to tap me and by exploiting your curiosity I got what I wanted. 😈\n\nSeriously don\'t tap me again!',
   'You fell for it again! Keep tapping 😌',
   'Tap me harder 😌',
   'Oh yeah, I said TAP me harder 😏',

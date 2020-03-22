@@ -1,6 +1,7 @@
 {
   "name": "react-native-application",
   "main": "__generated__/AppEntry.js",
+  "license": "MIT",
   "version": "1.0.0",
   "private": true,
   "scripts": {

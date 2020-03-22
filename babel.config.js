@@ -6,11 +6,11 @@ module.exports = {
     "production": {
       "plugins": [
         "transform-remove-console",
-        [ 'transform-react-jsx', { pragma: 'h' } ],
-        'syntax-dynamic-import',
+        [ '@babel/plugin-transform-react-jsx', { pragma: 'h' } ],
+        '@babel/plugin-syntax-dynamic-import',
         // 'babel-plugin-transform-es2015-spread', // FIXME Still not working :(
-        'transform-runtime', // FIXME Note this is in .babelrc!
-        'transform-async-to-generator',
+        '@babel/plugin-transform-runtime', // FIXME Note this is in .babelrc!
+        '@babel/plugin-transform-async-to-generator',
       ]
     }
   }

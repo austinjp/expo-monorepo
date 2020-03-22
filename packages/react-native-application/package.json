@@ -17,9 +17,9 @@
   "dependencies": {
     "@expo/samples": "2.1.1",
     "example-custom-package": "1.0.0",
-    "expo": "32.0",
+    "expo": "^36.0.2",
     "react": "16.6",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native": "^0.61.5",
     "react-navigation": "^2.16.0"
   },
   "devDependencies": {

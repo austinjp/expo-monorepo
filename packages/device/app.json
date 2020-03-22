@@ -13,7 +13,7 @@
     "nodeModulesPath": "../../",
     "entryPoint": "./index.js",
     "packagerOpts": {
-      "config": "./rn-cli.config.js"
+      "config": "./metro.config.js"
     },
     "splash": {
       "image": "./assets/images/splash.png",

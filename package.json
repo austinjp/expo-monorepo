@@ -7,24 +7,24 @@
   "author": "Fried-Chicken <Fried-Chicken@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
-    "@expo/samples": "2.1.1",
+    "@expo/samples": "3.0.3",
     "expo": "^36.0",
-    "metro-config": "^0.53.1",
+    "metro-config": "^0.59.0",
     "react": "^16.9.0",
     "react-native": "^0.61.5",
     "react-native-reanimated": "^1.7.0",
-    "react-navigation": "^2.16.0"
+    "react-navigation": "^4.3.2"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "babel-plugin-module-resolver": "^3.1.1",
-    "eslint": "^5.7.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
-    "jest-expo": "30.0.0",
-    "lerna": "^3.4.3"
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "jest-expo": "36.0.1",
+    "lerna": "^3.20.2"
   },
   "workspaces": [
     "packages/*"

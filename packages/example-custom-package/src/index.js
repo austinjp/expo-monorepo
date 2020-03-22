@@ -1,4 +1,4 @@
-export { ExampleComponent } from './src/components/ExampleComponent';
+export { ExampleComponent } from './components/ExampleComponent';
 
 const messages = [
   'I said don\'t tap me!\n\nOr maybe I wanted you to tap me and by exploiting your curiosity I got what I wanted. 😈\n\nSeriously don\'t tap me again!',

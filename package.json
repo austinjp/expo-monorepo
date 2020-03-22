@@ -10,8 +10,8 @@
     "@expo/samples": "2.1.1",
     "expo": "^36.0",
     "metro-config": "^0.53.1",
-    "react": "16.9.0",
-    "react-native": "0.61.5",
+    "react": "^16.9.0",
+    "react-native": "^0.61.5",
     "react-native-reanimated": "^1.7.0",
     "react-navigation": "^2.16.0"
   },

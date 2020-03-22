@@ -1,6 +1,6 @@
 {
   "name": "example-custom-package",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Some custom logic",
   "main": "src/index.js",
   "scripts": {

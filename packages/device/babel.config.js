@@ -1,6 +1,6 @@
 module.exports = {
   "presets": [
-    "module:babel-preset-expo",
+    "expo",
   ],
   "env": {
     "production": {

@@ -2,7 +2,7 @@
   "name": "device",
   "main": "__generated__/AppEntry.js",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "expo start",
@@ -31,7 +31,8 @@
     "expo-web-browser": "^8.0.0",
     "react": "^16.6",
     "react-native": "^0.61.5",
-    "react-navigation": "^2.16.0"
+    "react-navigation": "^2.16.0",
+    "web": "^0.0.1"
   },
   "devDependencies": {
     "jest-expo": "^30.0.0",

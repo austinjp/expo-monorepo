@@ -15,6 +15,8 @@ You need to install [watchman](https://facebook.github.io/watchman/)
     - `yarn -W add react-native-safe-area-context`
     - `npx yarn@1.19.1 workspace device add @react-navigation/stack`
     - `yarn -W add @react-navigation/compat`
-    - `npx yarn@1.19.1 workspace device add @react-navigation/bottom-tabs`
-    - `npx yarn@1.19.1 workspace device add expo-web-browser`
+    - `npx yarn@1.19.1 workspace device add @react-navigation/bottom-tabs expo-web-browser`
+    - `npx yarn@1.19.1 workspace web add babel-preset-expo`
+    - `npx yarn@1.19.1 workspace web add -D webpack webpack-cli webpack-dev-server path graceful-fs`
+    - `yarn -W add -D webpack webpack-cli webpack-dev-server path graceful-fs`
 1. Run `yarn start --clear --lan`

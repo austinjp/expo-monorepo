@@ -12,6 +12,7 @@
     "debug": "^3.1.0",
     "expo": "^36.0.2",
     "find-yarn-workspace-root": "^1.2.0",
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^0.5.1",
+    "web": "^0.0.1"
   }
 }

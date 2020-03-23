@@ -16,4 +16,5 @@ You need to install [watchman](https://facebook.github.io/watchman/)
     - `npx yarn@1.19.1 workspace device add @react-navigation/stack`
     - `yarn -W add @react-navigation/compat`
     - `npx yarn@1.19.1 workspace device add @react-navigation/bottom-tabs`
+    - `npx yarn@1.19.1 workspace device add expo-web-browser`
 1. Run `yarn start --clear --lan`

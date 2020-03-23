@@ -10,12 +10,16 @@ const cfg = (async () => {
   } = await getDefaultConfig();
   return {
     resolver: {
-      // assetExts: [assetExts, 'txt', 'xml', 'png', 'jpg', 'pb', 'tflite'],
+      assetExts: [...assetExts, 'txt', 'xml', 'png', 'jpg', 'pb', 'tflite','ttf'],
       sourceExts: [...sourceExts, "js", "jsx"],
     },
     transformer: {
       babelTransformerPath: require.resolve("metro-babel-transformer"),
-      assetRegistryPath: "./assets/",
+      assetRegistryPath: [
+        "./assets/",
+        "./assets/fonts/",
+        "./assets/images/",
+      ],
     },
   };
 })();

@@ -5,8 +5,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server -p --progress --colors --env production",
-    "build": "webpack -d --progress --colors --env development",
+    "start": "webpack-dev-server -d --progress --colors --env production --config webpack.dev.js",
+    "build-dev": "webpack -d --progress --colors --env development --config webpack.dev.js",
+    "build-prod": "webpack -p --progress --colors --env production --config webpack.prod.js",
     "postinstall": "expo-yarn-workspaces postinstall"
   },
   "dependencies": {
@@ -14,7 +15,10 @@
     "@babel/plugin-transform-react-jsx": "^7.9.1",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "babel-preset-expo": "^8.0.0",
-    "example-custom-package": "0.0.1"
+    "copy-webpack-plugin": "^5.1.1",
+    "example-custom-package": "0.0.1",
+    "html-webpack-plugin": "^4.0.1",
+    "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.9.1",

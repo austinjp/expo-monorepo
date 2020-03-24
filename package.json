@@ -4,7 +4,8 @@
   "scripts": {
     "device:start": "lerna --scope=device run start --stream --",
     "web:start": "lerna --scope=web run start --stream --",
-    "web:build": "lerna --scope=web run build --stream --"
+    "web:build-dev": "lerna --scope=web run build-dev --stream --",
+    "web:build-prod": "lerna --scope=web run build-prod --stream --"
   },
   "author": "Fried-Chicken <Fried-Chicken@users.noreply.github.com>",
   "license": "MIT",

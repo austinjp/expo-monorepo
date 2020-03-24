@@ -1,6 +1,6 @@
 # expo-monorepo
 
-An expo monorepo boilerplate using lerna and yarn workspaces for creating react native apps. 
+An expo monorepo boilerplate using lerna and yarn workspaces for creating react native apps.
 
 ## Prerequisites
 
@@ -19,4 +19,4 @@ You need to install [watchman](https://facebook.github.io/watchman/)
     - `npx yarn@1.19.1 workspace web add babel-preset-expo`
     - `npx yarn@1.19.1 workspace web add -D webpack webpack-cli webpack-dev-server path graceful-fs`
     - `yarn -W add -D webpack webpack-cli webpack-dev-server path graceful-fs`
-1. Run `yarn start --clear --lan`
+1. Run `yarn device:start --clear --lan` for Android build, or `yarn web:build-prod` or `yarn web:build-dev` for web builds.

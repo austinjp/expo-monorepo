@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "device:start": "lerna --scope=device run start --stream --",
-    "web:start": "lerna --scope=web run start --stream --"
+    "web:start": "lerna --scope=web run start --stream --",
+    "web:build": "lerna --scope=web run build --stream --"
   },
   "author": "Fried-Chicken <Fried-Chicken@users.noreply.github.com>",
   "license": "MIT",

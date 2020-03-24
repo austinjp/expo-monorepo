@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server -p --progress --colors --env production",
+    "build": "webpack -d --progress --colors --env development",
     "postinstall": "expo-yarn-workspaces postinstall"
   },
   "dependencies": {

@@ -18,20 +18,7 @@ module.exports = {
       test: /\.(js|jsx)$/,
       use: {
         loader: 'babel-loader',
-        // options: {
-        //   presets: [
-        //     [ '@babel/preset-env', { targets: { browsers: [ "last 3 versions" ] } } ],
-        //     '@babel/preset-react',
-        //     // 'babel-preset-stage-0' // FIXME Note this is in .babelrc!
-        //   ],
-        //   plugins: [
-        //     [ '@babel/plugin-transform-react-jsx', { pragma: 'h' } ],
-        //     '@babel/plugin-syntax-dynamic-import',
-        //     // 'babel-plugin-transform-es2015-spread', // FIXME Still not working :(
-        //     // 'babel-plugin-transform-runtime' // FIXME Note this is in .babelrc!
-        //     // 'babel-plugin-transform-async-to-generator',
-        //   ]
-        // },
+        // See babel.config.js
       },
     }],
   },

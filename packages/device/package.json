@@ -29,7 +29,7 @@
     "example-custom-package": "0.0.1",
     "expo": "^36.0.2",
     "expo-web-browser": "^8.0.0",
-    "react": "^16.6",
+    "react": "16.9.0",
     "react-native": "^0.61.5",
     "react-navigation": "^2.16.0",
     "web": "^0.0.1"

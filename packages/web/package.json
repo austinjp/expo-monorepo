@@ -15,9 +15,11 @@
     "@babel/plugin-transform-react-jsx": "^7.9.1",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "babel-preset-expo": "^8.0.0",
+    "babel-preset-react-native": "^4.0.1",
     "copy-webpack-plugin": "^5.1.1",
     "example-custom-package": "0.0.1",
     "html-webpack-plugin": "^4.0.1",
+    "preact": "^10.3.4",
     "webpack-merge": "^4.2.2"
   },
   "devDependencies": {

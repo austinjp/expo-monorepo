@@ -1,17 +1,23 @@
+const presets = [ "expo" ]
+
+const plugins = [
+  "transform-remove-console",
+  [ '@babel/plugin-transform-react-jsx', { pragma: 'h' } ],
+  '@babel/syntax-dynamic-import',
+  '@babel/transform-runtime',
+  '@babel/transform-async-to-generator',
+]
+
 module.exports = {
-  "presets": [
-    "expo",
-  ],
+  "presets": presets,
   "env": {
     "production": {
-      "plugins": [
-        "transform-remove-console",
-        [ '@babel/plugin-transform-react-jsx', { pragma: 'h' } ],
-        'syntax-dynamic-import',
-        // 'babel-plugin-transform-es2015-spread', // FIXME Still not working :(
-        'transform-runtime', // FIXME Note this is in .babelrc!
-        'transform-async-to-generator',
-      ]
+      "plugins": plugins
+    }
+  },
+  "env": {
+    "development": {
+      "plugins": plugins
     }
   }
 }

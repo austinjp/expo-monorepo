@@ -7,8 +7,5 @@
   "scripts": {
     "postinstall": "expo-yarn-workspaces postinstall"
   },
-  "dependencies": {
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-react-jsx": "^7.9.4"
-  }
+  "dependencies": {}
 }

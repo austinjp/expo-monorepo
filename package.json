@@ -10,8 +10,13 @@
   "author": "Fried-Chicken <Fried-Chicken@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
     "@expo/samples": "3.0.3",
     "@react-navigation/compat": "^5.1.5",
+    "babel-core": "7.0.0-bridge.0",
     "babel-loader": "^8.1.0",
     "expo": "^36.0",
     "metro-config": "^0.59.0",

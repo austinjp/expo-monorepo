@@ -12,6 +12,7 @@
   "dependencies": {
     "@expo/samples": "3.0.3",
     "@react-navigation/compat": "^5.1.5",
+    "babel-loader": "^8.1.0",
     "expo": "^36.0",
     "metro-config": "^0.59.0",
     "react": "16.9.0",

@@ -23,7 +23,6 @@
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.9.1",
     "@babel/preset-react": "^7.9.1",
-    "babel-loader": "^8.1.0",
     "graceful-fs": "^4.2.3",
     "path": "^0.12.7",
     "webpack": "^4.42.0",

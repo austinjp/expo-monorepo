@@ -1,6 +1,7 @@
 const common = require('./webpack.common.js')
 const merge = require('webpack-merge')
 const terser = require("terser-webpack-plugin")
+const webpack = require('webpack')
 
 const hashDigestLength = 20
 
@@ -27,6 +28,15 @@ module.exports = merge(common,{
       }),
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      __DEV__: false,
+      process: { env: {
+        __DEV__: false,
+        NODE_ENV: '"production"',
+      } }
+    })
+  ],
 
 //     // FIXME Some of this could do with being re-enabled!
 //     splitChunks: {

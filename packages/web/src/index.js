@@ -1,6 +1,8 @@
-import App from '../App';
+import { React, h, render } from "shared/lib/react-preact";
+
+import App from '../App.js';
 
 render(
-  <App/>,
+  <App />,
   document.getElementById("root")
 );

@@ -12,6 +12,8 @@ import * as WebBrowser from 'expo-web-browser';
 import { exampleFunction, ExampleComponent } from 'example-custom-package';
 import { MonoText } from '../components/StyledText';
 
+import { Test } from "shared/component"
+
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -39,6 +41,7 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.getStartedContainer}>
+            <Test />
             <ExampleComponent
               onPress={this.tapMe}
             />

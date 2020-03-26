@@ -1,12 +1,16 @@
-import React from 'react'
+import { React, h, Component } from "shared/lib/react-preact"
+import { Test } from "shared/component"
 
-export default class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props)
     this.state = {}
   }
 
   render() {
-    return <div>Ok!</div>
+    return <Test />
   }
 }
+
+export default App
+export { App }

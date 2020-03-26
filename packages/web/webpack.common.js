@@ -20,13 +20,13 @@ let cfg = {
         use: {
           loader: 'babel-loader', // See babel.config.js
           options: {
-            // NOTE Cannot use 'rootMode: "upward"' here because
-            // we need Pract pragma "h" to only ever be applied
+            // We need Pract pragma "h" to only ever be applied
             // by Webpack when building for web. This requires
             // babel to parse packages/shared -- but if we put
             // that into babel.config.js it will apply pragma h
             // for all builds including non-web (i.e. React
             // Native) builds. So it must remain only here.
+            rootMode: "upward",
             presets: [
               // "@babel/preset-react",
               // "@babel/preset-flow",

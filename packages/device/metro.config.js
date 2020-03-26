@@ -2,6 +2,7 @@ const { createReactNativeConfiguration } = require('expo-yarn-workspaces');
 const {getDefaultConfig} = require('metro-config');
 const { mergeConfig } = require("metro-config");
 
+// This provides "expo-keep-awake" (plus other things, probably).
 const crn = createReactNativeConfiguration(__dirname);
 
 const cfg = (async () => {

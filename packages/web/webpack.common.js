@@ -13,14 +13,47 @@ const hashFunction = 'sha512'
 let cfg = {
   entry: "./src/index.js",
   module: {
-    rules: [{
-      exclude: /node_modules/,
-      test: /\.(js|jsx)$/,
-      use: {
-        loader: 'babel-loader',
-        // See babel.config.js
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader', // See babel.config.js
+          options: {
+            presets: [
+              "@babel/preset-react",
+              // "@babel/preset-flow",
+              "module:metro-react-native-babel-preset",
+              // "@babel/preset-env", // { targets: { browsers: [ "last 3 versions" ] } } ],
+            ],
+            plugins: [
+              // '@babel/plugin-transform-react-jsx',
+              // [ '@babel/plugin-transform-react-jsx', { pragma: 'h' } ],
+              // '@babel/plugin-syntax-dynamic-import',
+              // '@babel/plugin-transform-spread',
+              // '@babel/plugin-transform-runtime',
+              // '@babel/plugin-transform-async-to-generator',
+              // '@babel/plugin-transform-flow-strip-types',
+              // '@babel/plugin-proposal-class-properties',
+            ]
+          }
+        },
       },
-    }],
+      {
+        // Many react-native libraries do not compile their ES6 JS.
+        test: /\.(js|jsx)$/,
+        include: [ /node_modules\/react-native\.*/ ],
+        // exclude: /node_modules\/react-native-web\//,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              "module:metro-react-native-babel-preset",
+            ],
+          }
+        }
+      }
+    ],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -42,7 +75,7 @@ let cfg = {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
           name(module) {
-            // get the name. E.g. node_modules/packageName/not/this/part.js
+            // get the name. e.g. node_modules/packageName/not/this/part.js
             // or node_modules/packageName
             const plain_name = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1]
             return "vendor/" + plain_name

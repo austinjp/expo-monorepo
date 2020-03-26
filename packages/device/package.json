@@ -5,10 +5,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "expo start",
+    "start": "EXPO_DEBUG=true expo start",
     "postinstall": "expo-yarn-workspaces postinstall",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "EXPO_DEBUG=true expo start --android",
+    "ios": "EXPO_DEBUG=true expo start --ios",
     "eject": "expo eject",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll"
   },

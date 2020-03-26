@@ -122,15 +122,18 @@ let cfg = {
   resolve: {
     extensions: [
       // Note, the ".android.js" and ".ios.js" are necessary because react-native
-      // includes libraries with files ending in these extensions, and for some
-      // reason webpack fails to resolve them. The issue is inside webpack/lib/WebpackOptionsDefaulter.js
+      // includes libraries with files ending in these extensions, and webpack
+      // fails to resolve them. The issue is inside webpack/lib/WebpackOptionsDefaulter.js
       // which simply adds a fixed list of extensions onto the root filename. These
       // extensions are listed here, plus the android and ios variants.
       ".wasm", ".mjs", ".js", ".json", ".android.js", ".ios.js"
     ],
     alias: {
-      'react': 'preact/compat',
-      'react-dom': 'preact/compat',
+      "react-native$": "react-native-web/dist/index.js",
+      "react$": "preact/compat",
+      "react-dom/test-utils$": "preact/test-utils",
+      "react-dom$": "preact/compat", // Must be below test-utils
+      "react-dom/unstable-native-dependencies$": "preact-responder-event-plugin",
     },
   },
 }

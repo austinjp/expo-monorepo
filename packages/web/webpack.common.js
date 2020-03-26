@@ -20,15 +20,22 @@ let cfg = {
         use: {
           loader: 'babel-loader', // See babel.config.js
           options: {
+            // NOTE Cannot use 'rootMode: "upward"' here because
+            // we need Pract pragma "h" to only ever be applied
+            // by Webpack when building for web. This requires
+            // babel to parse packages/shared -- but if we put
+            // that into babel.config.js it will apply pragma h
+            // for all builds including non-web (i.e. React
+            // Native) builds. So it must remain only here.
             presets: [
-              "@babel/preset-react",
+              // "@babel/preset-react",
               // "@babel/preset-flow",
               "module:metro-react-native-babel-preset",
               // "@babel/preset-env", // { targets: { browsers: [ "last 3 versions" ] } } ],
             ],
             plugins: [
               // '@babel/plugin-transform-react-jsx',
-              // [ '@babel/plugin-transform-react-jsx', { pragma: 'h' } ],
+              [ '@babel/plugin-transform-react-jsx', { pragma: 'h' } ],
               // '@babel/plugin-syntax-dynamic-import',
               // '@babel/plugin-transform-spread',
               // '@babel/plugin-transform-runtime',
@@ -41,15 +48,12 @@ let cfg = {
       },
       {
         // Many react-native libraries do not compile their ES6 JS.
-        test: /\.(js|jsx)$/,
-        include: [ /node_modules\/react-native\.*/ ],
-        // exclude: /node_modules\/react-native-web\//,
+        test: [ /node_modules\/react-native/ ],
+        exclude: /node_modules\/react-native-web\//,
         use: {
-          loader: "babel-loader",
+          loader: "babel-loader", // See babel.config.js
           options: {
-            presets: [
-              "module:metro-react-native-babel-preset",
-            ],
+            rootMode: "upward",
           }
         }
       }
@@ -96,7 +100,7 @@ let cfg = {
         // Node version is necessary because some modules seem to destroy it,
         // and other modules down-stream can expect it.
         version: JSON.stringify(version),
-        env: { VERSION: version }
+        env: { VERSION: JSON.stringify(version) }
       }
     }),
 

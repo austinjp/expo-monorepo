@@ -136,6 +136,10 @@ let cfg = {
       "react-dom/unstable-native-dependencies$": "preact-responder-event-plugin",
     },
   },
+  externals: [
+    "react-native",
+    "react-native-web"
+  ]
 }
 
 module.exports = cfg

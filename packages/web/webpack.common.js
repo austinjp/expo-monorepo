@@ -65,6 +65,7 @@ let cfg = {
     chunkFilename: '[name].js',
     libraryExport: 'default',
     globalObject: 'this',
+    libraryTarget: "umd",
   },
 
   optimization: {

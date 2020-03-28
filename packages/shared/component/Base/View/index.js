@@ -1,24 +1,14 @@
 import { React, h, Component, render } from "shared/lib/react-preact"
-import { Platform } from "shared/lib/platform"
-
-let _View
-if (Platform.device) {
-  _View = require("react-native").View
-}
-
-import { Text } from "shared/component/Base/Text"
+import { diversify } from "shared/lib/diversify"
 
 class View extends Component {
-  render(props) {
-    if (Platform.web) {
-      return (
-        <div><Text /></div>
-      )
-    }
+  constructor(props) {
+    super(props)
+  }
 
-    return (
-      <_View><Text /></_View>
-    )
+  render(props) {
+    const styles = (this.props || {}).style || {}
+    return diversify({props:this.props,styles:styles})
   }
 }
 

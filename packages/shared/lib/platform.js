@@ -5,10 +5,10 @@ import { React, h, Component, render } from "shared/lib/react-preact"
 // device package, which uses React Native and which in turn uses the true React.
 var isDevice = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED ? true : false
 
-const Platform = {
+const platform = {
   web: ! isDevice,
   device: isDevice,
 }
 
-export default Platform
-export { Platform }
+export default platform
+export { platform }

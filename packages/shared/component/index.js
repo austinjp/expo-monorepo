@@ -1,3 +1,4 @@
+import { Base } from "./Base"
 import { Test } from "./Test"
 
-export { Test }
+export { Base, Test }

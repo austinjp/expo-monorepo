@@ -8,7 +8,11 @@ class Test extends Component {
 
   render(props) {
     return (
-      <View style={{background:"red",color:"white",height:"100px",display:"block"}}><Text /></View>
+      <View style={{flex:1,justifyContent:"center",alignItems:"stretch"}}>
+        <View style={{flex:1,backgroundColor:"#ff0"}}>
+          <Text style={{color:"#f00"}}>Woot?</Text>
+        </View>
+      </View>
     )
   }
 }

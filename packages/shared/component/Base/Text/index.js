@@ -1,30 +1,13 @@
-import { React, h, Component, render } from "shared/lib/react-preact"
-import { Platform } from "shared/lib/platform"
+import { React, h, Component, render, Fragment } from "shared/lib/react-preact"
+import { diversify } from "shared/lib/diversify"
 
 class Text extends Component {
+  constructor(props) {
+    super(props)
+  }
+
   render(props) {
-
-    const t = "Ok!?"
-
-    if (Platform.web) {
-      return (
-          <div>{t}</div>
-      )
-    }
-
-    // var _Text
-    // (async () => {
-    //   await import("../../../../device/node_modules/react-native").then((m) => { console.log(m) })
-    // })()
-
-    let _Text
-    if (Platform.device) {
-      _Text = require("react-native").Text
-    }
-
-    return (
-        <_Text>{t}</_Text>
-    )
+    return diversify({element:"text",props:this.props})
   }
 }
 

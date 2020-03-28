@@ -1,7 +1,6 @@
 var React
-var render
 var Component
-var h
+var render
 
 try {
   React = require('react')
@@ -22,6 +21,7 @@ try {
 } catch(e) {}
 
 
-h = React.createElement
+const h = React.createElement
+const Fragment = React.Fragment
 
-export { React, h, Component, render }
+export { React, h, Component, Fragment, render }

@@ -1,6 +1,8 @@
 import { React, h } from "shared/lib/react-preact"
 import { platform } from "shared/lib/platform"
 
+// FIXME See https://reactnative.dev/docs/intro-react-native-components#core-components
+
 function diversify(o) {
 
   const props   =  (o || {}).props   || {}

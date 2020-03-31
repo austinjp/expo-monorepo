@@ -69,3 +69,9 @@ Then you should be able to run these:
 yarn device:android build
 # yarn device:ios build # Not yet implemented :(
 ```
+
+# TODO
+
+- `yarn device:ios build` script
+- `yarn all` scripts
+- Eject Expo and [reduce bundle sizes](https://medium.com/@aswinmohanme/how-i-reduced-the-size-of-my-react-native-app-by-86-27be72bba640)

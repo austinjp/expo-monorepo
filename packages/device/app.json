@@ -2,7 +2,7 @@
   "expo": {
     "name": "device",
     "description": "A very interesting project.",
-    "slug": "device",
+    "slug": "test",
     "privacy": "unlisted",
     "sdkVersion": "36.0.0",
     "platforms": ["ios", "android"],
@@ -25,7 +25,13 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
+      "bundleIdentifier": "io.cordelia.test",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
+    },
+    "android": {
+      "package": "io.cordelia.test",
+      "versionCode": 1
     }
   }
 }

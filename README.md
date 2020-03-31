@@ -32,7 +32,40 @@ The versions of React and React Native need to be compatible. Check what the Rea
 
 Check what you have installed with something like the following:
 
-```
+```sh
 grep '"react-native"' package.json packages/*/package.json
 grep '"react"' package.json packages/*/package.json
+```
+
+## Apple Developer
+
+Ensure the "identifier" for your app in the [Apple Developer dashboard](https://developer.apple.com/account) exactly matches the strings `expo.android.package` and `expo.ios.bundleIdentifier` defined in `packages/device/app.json`.
+
+
+## Expo
+
+To get started, try the following:
+
+```sh
+expo login
+```
+
+Then authenticate with Apple when starting the iOS build as below. **NOTE** the option `--clear-credentials` will *DELETE* your credentials stored on Apple servers. Only add this if necessary!
+
+```sh
+pushd packages/device ; expo build:ios --clear-credentials --apple-id my@appleId.com ; popd
+```
+
+To troubleshoot, try adding `EXPO_DEBUG=true`:
+
+```sh
+pushd packages/device ; EXPO_DEBUG=true expo build:ios --clear-credentials --apple-id my@appleId.com ; popd
+```
+
+
+Then you should be able to run these:
+
+```sh
+yarn device:android build
+# yarn device:ios build # Not yet implemented :(
 ```

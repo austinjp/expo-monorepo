@@ -27,7 +27,7 @@ You need to install [watchman](https://facebook.github.io/watchman/)
 
 ## Ejecting Expo
 
-Running `yarn workspace device expo eject` makes Expo generate files in two folders, and means _expo can no longer be used to manage the project_. The two folders contain the files necessary to build Android and iOS versions of the app with the usual tools instead of Expo (Android Studio for Android, and XCode for iOS).
+Running `yarn workspace device expo eject` makes Expo generate files in two folders, and means _Expo can no longer be used to manage the project_. The two folders contain the files necessary to build Android and iOS versions of the app with the usual tools instead of Expo (Android Studio for Android, and XCode for iOS).
 
 **Warning**: to develop iOS apps with XCode you **need**:
 
@@ -44,10 +44,12 @@ XCode is required to do the following:
 
 Expo provides iOS builds, and can (apparently) upload apps to the app store. However, the apps will be reasonably large since they require the Expo wrapper code which allows JavaScript apps to run. Expo comes bundled with a load of APIs by default, and these are bundled into the generated app. Expo also does things like certificate provisioning automatically, which makes things simpler than doing it yourself.
 
+After running `yarn workspace device expo eject` you will be prompted to answer three questions. For the first multiple-choice option, select "Bare: I'd like a bare React Native project". The next two just ask you to name your app.
+
 
 ### Undoing Expo eject
 
-You can undo the Expo eject using git, as shown here. **Be aware** this will rollback **all** changes since your last commit, so **be careful**.
+You can undo the Expo eject using git, as shown here. **Be aware** this will rollback **all** changes since your last commit (and only _up to_ that commit) so **be careful**.
 
 ```sh
 git clean --force && git reset --hard

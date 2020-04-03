@@ -55,7 +55,7 @@ packages/device/android
 packages/device/ios
 ```
 
-These folder are **ignored** by Git using the `.gitignore` file in the project root. Remove them from that file if you want these folders to be added to your project.
+The contents of these folders are **ignored** by Git using the `.gitignore` files in those directories.
 
 
 ## Trouble-shooting

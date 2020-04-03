@@ -4,5 +4,3 @@ node_modules/
 .expo
 web-build
 packages/web/dist
-packages/device/android/
-packages/device/ios/

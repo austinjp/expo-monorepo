@@ -48,7 +48,7 @@ git clean --force && git reset --hard
 
 ### Folders
 
-Running `expo eject` will generate files in the following folders:
+Running `yarn workspace device expo eject` will generate files in the following folders:
 
 ```
 packages/device/android

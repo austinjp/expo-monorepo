@@ -31,11 +31,18 @@ Running `yarn workspace device expo eject` makes Expo generate files in two fold
 
 **Warning**: to develop iOS apps with XCode you **need**:
 
-- a Mac running the latest supported version of Mac OS, or possibly a "cloud" Mac from somewhere like <macincloud.com>
+- a Mac running the latest supported version of Mac OS, or possibly a "cloud" Mac from somewhere like <https://macincloud.com>
 - XCode
 - an Apple developer account at <https://developer.apple.com>
 
-All of the above cost money. If you cannot access these items, you are probably limited to using Expo for iOS development.
+All of the above cost money. If you cannot access these items, you will probably need to continue using Expo for iOS development.
+
+XCode is required to do the following:
+
+- Upload your app to the Apple app store.
+- Generate the required .p12 certificate files.
+
+Expo provides iOS builds, and can (apparently) upload apps to the app store. However, the apps will be reasonably large since they require the Expo wrapper code which allows JavaScript apps to run. Expo comes bundled with a load of APIs by default, and these are bundled into the generated app. Expo also does things like certificate provisioning automatically, which makes things simpler than doing it yourself.
 
 
 ### Undoing Expo eject

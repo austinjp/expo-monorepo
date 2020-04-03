@@ -24,6 +24,40 @@ You need to install [watchman](https://facebook.github.io/watchman/)
         - `yarn workspace device remove react ; npx yarn@1.19.1 workspace device add 'react@16.9.0'`
 1. Run `yarn device:start --clear --lan` for Android build, or `yarn web:build-prod` or `yarn web:build-dev` for web builds.
 
+
+## Ejecting Expo
+
+Running `expo eject` makes Expo generate two folders, and means _expo can no longer be used to manage the project_. The two folders contain the files necessary to build Android and iOS versions of the app with the usual tools instead of Expo (Android Studio for Android, and XCode for iOS).
+
+**Warning**: to develop iOS apps with XCode you **need**:
+
+- a Mac running the latest supported version of Mac OS, or possibly a "cloud" Mac from somewhere like <macincloud.com>
+- XCode
+- an Apple developer account at <https://developer.apple.com>
+
+All of the above cost money. If you cannot access these items, you are probably limited to using Expo for iOS development.
+
+
+### Undoing Expo eject
+
+You can undo the Expo eject using git, as shown here. **Be aware** this will rollback **all** changes since your last commit, so **be careful**.
+
+```sh
+git clean --force && git reset --hard
+```
+
+### Folders
+
+Running `expo eject` will generate the following folders:
+
+```plain
+packages/device/android
+packages/device/ios
+```
+
+These folder are **ignored** by Git using the `.gitignore` file in the project root. Remove them from that file if you want these folders to be added to your project.
+
+
 ## Trouble-shooting
 
 ### React and React Native compatibility

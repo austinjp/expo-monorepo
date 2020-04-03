@@ -27,7 +27,7 @@ You need to install [watchman](https://facebook.github.io/watchman/)
 
 ## Ejecting Expo
 
-Running `expo eject` makes Expo generate two folders, and means _expo can no longer be used to manage the project_. The two folders contain the files necessary to build Android and iOS versions of the app with the usual tools instead of Expo (Android Studio for Android, and XCode for iOS).
+Running `yarn workspace device expo eject` makes Expo generate files in two folders, and means _expo can no longer be used to manage the project_. The two folders contain the files necessary to build Android and iOS versions of the app with the usual tools instead of Expo (Android Studio for Android, and XCode for iOS).
 
 **Warning**: to develop iOS apps with XCode you **need**:
 
@@ -48,9 +48,9 @@ git clean --force && git reset --hard
 
 ### Folders
 
-Running `expo eject` will generate the following folders:
+Running `expo eject` will generate files in the following folders:
 
-```plain
+```
 packages/device/android
 packages/device/ios
 ```

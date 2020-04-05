@@ -2,6 +2,8 @@
 
 An expo monorepo boilerplate using lerna and yarn workspaces for creating react native apps.
 
+NOTE: VERY ALPHA. DO NOT USE.
+
 ## Prerequisites
 
 You need to install [watchman](https://facebook.github.io/watchman/)
@@ -27,17 +29,17 @@ You need to install [watchman](https://facebook.github.io/watchman/)
 
 ## Ejecting Expo
 
-Running `yarn workspace device expo eject` makes Expo generate files in two folders, and means _Expo can no longer be used to manage the project_. The two folders contain the files necessary to build Android and iOS versions of the app with the usual tools instead of Expo (Android Studio for Android, and XCode for iOS).
+Running `yarn workspace device expo eject` makes Expo generate files in two folders, and means _Expo can no longer be used to manage the project_. The two folders contain the files necessary to build Android and iOS versions of the app with the usual tools instead of Expo (Android Studio for Android, and Xcode for iOS).
 
-**Warning**: to develop iOS apps with XCode you **need**:
+**Warning**: to develop iOS apps with Xcode you **need**:
 
 - a Mac running the latest supported version of Mac OS, or possibly a "cloud" Mac from somewhere like <https://macincloud.com>
-- XCode
+- Xcode
 - an Apple developer account at <https://developer.apple.com>
 
 All of the above cost money. If you cannot access these items, you will probably need to continue using Expo for iOS development.
 
-XCode is required to do the following:
+Xcode is required to do the following:
 
 - Upload your app to the Apple app store.
 - Generate the required .p12 certificate files.
@@ -65,6 +67,10 @@ packages/device/ios
 ```
 
 The contents of these folders are **ignored** by Git using the `.gitignore` files in those directories.
+
+### After ejecting....
+
+It seems that a *LOT* of work is required after ejecting. *Sigh*. My attempts are documented in [after-ejecting.md](after-ejecting.md). This is very much a work in progress!
 
 
 ## Trouble-shooting

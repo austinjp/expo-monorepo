@@ -5,7 +5,7 @@ An attempt to get native builds working after ejecting.
 You can either follow the directions below, or simply copy these files:
 
 ```
-cp -r patches/files/package/device/* package/device/
+cp -r patches/files/packages/device/* packages/device/
 ```
 
 ## Manually editing the files
